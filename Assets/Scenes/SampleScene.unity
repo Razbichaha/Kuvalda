@@ -667,8 +667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa77eb6bfe867b74e8a22075088eee32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LineLife: {fileID: 147299538}
-  mPro: {fileID: 696889467}
+  _lineLife: {fileID: 147299538}
+  _text: {fileID: 696889467}
 --- !u!114 &696889467
 MonoBehaviour:
   m_ObjectHideFlags: 0

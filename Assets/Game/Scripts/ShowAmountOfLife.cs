@@ -14,7 +14,7 @@ public class ShowAmountOfLife : MonoBehaviour
 
     public void InputText()
     {
-        float procent = 100;
+        float procent = 100f;
 
         _text.text = ((int)(_lineLife.value * procent)).ToString();
     }
