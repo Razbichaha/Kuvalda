@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class DamagCalculation : MonoBehaviour
 {
-
     private int _valueLife = 100;
     private int _incrementValue = 10;
     private int _maxProcent = 100;
