@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeValueLife : MonoBehaviour
+public class StandardOfLiving : MonoBehaviour
 {
-    [SerializeField] private Slider _life;
+    [SerializeField] private DisplyLife _displyLife;
 
     private int _valueLife = 100;
     private int _incrementValue = 10;
@@ -15,18 +15,18 @@ public class ChangeValueLife : MonoBehaviour
         ShowValueLife();
     }
 
-    public void TakeLife()
+    public void Damage()
     {
-        _valueLife -=  _incrementValue;
+        _valueLife -= _incrementValue;
 
-        if (_valueLife<_minProcent)
+        if (_valueLife < _minProcent)
         {
             _valueLife = _minProcent;
         }
         ShowValueLife();
     }
 
-    public void AddLife()
+    public void TakeDamage()
     {
         _valueLife += _incrementValue;
         if (_valueLife > _maxProcent)
@@ -40,6 +40,6 @@ public class ChangeValueLife : MonoBehaviour
     {
         float procent = 100f;
 
-        _life.value = (int)_valueLife/procent;
+        _displyLife.DisplyingValue((float)_valueLife / procent);
     }
 }
