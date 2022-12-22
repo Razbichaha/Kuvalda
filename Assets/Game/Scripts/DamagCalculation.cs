@@ -14,19 +14,12 @@ public class DamagCalculation : MonoBehaviour
     public void Damage()
     {
         _valueLife -= _incrementValue;
-
-        if (_valueLife < _minProcent)
-        {
-            _valueLife = _minProcent;
-        }
+        _valueLife = Mathf.Clamp(_valueLife, _minProcent, _maxProcent);
     }
 
     public void TakeDamage()
     {
         _valueLife += _incrementValue;
-        if (_valueLife > _maxProcent)
-        {
-            _valueLife = _maxProcent;
-        }
+        _valueLife = Mathf.Clamp(_valueLife, _minProcent, _maxProcent);
     }
 }
