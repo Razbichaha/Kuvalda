@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ShowAmountOfLife : MonoBehaviour
+public class DidgitalDisplay : MonoBehaviour
 {
     [SerializeField] private Slider _lineLife;
     [SerializeField] private TMP_Text _text;
@@ -14,8 +14,6 @@ public class ShowAmountOfLife : MonoBehaviour
 
     public void InputText()
     {
-        float procent = 100f;
-
-        _text.text = ((int)(_lineLife.value * procent)).ToString();
+        _text.text = ((int)(_lineLife.value)).ToString();
     }
 }
