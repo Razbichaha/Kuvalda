@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DamagCalculation : MonoBehaviour
+public class ButtonReactions : MonoBehaviour
 {
     [SerializeField] private UnityEvent _batonClic;
 

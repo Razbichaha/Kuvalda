@@ -5,8 +5,7 @@ using DG.Tweening;
 public class LinearDisplay : MonoBehaviour
 {
     [SerializeField] private Slider _lineLife;
-    [SerializeField] private DamagCalculation _calculator;
-    [SerializeField] private float _increment = 10f;
+    [SerializeField] private ButtonReactions _calculator;
 
     private float _endValue;
 
