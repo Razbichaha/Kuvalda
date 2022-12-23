@@ -412,9 +412,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 880110844}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.616
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -439,9 +439,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 147299536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee809da30c06e4a41b806d56be204dbd, type: 3}
+  m_Script: {fileID: 11500000, guid: dd27df916ff0bf045ab5f5a323f44a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lineLife: {fileID: 147299538}
+  _calculator: {fileID: 519420033}
+  _increment: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +542,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1c68320caa28948bff116fd560e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: {fileID: 147299538}
+  _batonClic:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 147299539}
+        m_TargetAssemblyTypeName: LinearDisplay, Assembly-CSharp
+        m_MethodName: Counting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &680429823
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,8 +981,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 519420033}
-        m_TargetAssemblyTypeName: ChangeValueLife, Assembly-CSharp
-        m_MethodName: TakeLife
+        m_TargetAssemblyTypeName: DamagCalculation, Assembly-CSharp
+        m_MethodName: Damage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1303,7 +1320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1c68320caa28948bff116fd560e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: {fileID: 147299538}
+  _batonClic:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1659886017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,7 +1335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1c68320caa28948bff116fd560e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: {fileID: 0}
+  _batonClic:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1824497887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,8 +1499,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 519420033}
-        m_TargetAssemblyTypeName: ChangeValueLife, Assembly-CSharp
-        m_MethodName: AddLife
+        m_TargetAssemblyTypeName: DamagCalculation, Assembly-CSharp
+        m_MethodName: TakeDamage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

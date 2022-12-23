@@ -1,8 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DamagCalculation : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _batonClic;
+
     private int _valueLife = 100;
     private int _incrementValue = 10;
     private int _maxProcent = 100;
@@ -14,11 +16,15 @@ public class DamagCalculation : MonoBehaviour
     {
         _valueLife -= _incrementValue;
         _valueLife = Mathf.Clamp(_valueLife, _minProcent, _maxProcent);
+
+        _batonClic.Invoke();
     }
 
     public void TakeDamage()
     {
         _valueLife += _incrementValue;
         _valueLife = Mathf.Clamp(_valueLife, _minProcent, _maxProcent);
+
+        _batonClic.Invoke();
     }
 }
