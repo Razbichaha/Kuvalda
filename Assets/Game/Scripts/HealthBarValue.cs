@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DidgitalDisplay : MonoBehaviour
+public class HealthBarValue : MonoBehaviour
 {
     [SerializeField] private Slider _lineLife;
     [SerializeField] private TMP_Text _text;
