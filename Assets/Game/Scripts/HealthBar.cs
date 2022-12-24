@@ -11,15 +11,15 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     {
-        Health.OnClic += Counting;
+        Health.HealthHasChanged += RecalculateHealth;
     }
 
     private void OnDisable()
     {
-        Health.OnClic -= Counting;
+        Health.HealthHasChanged -= RecalculateHealth;
     }
 
-    private  void Counting()
+    private  void RecalculateHealth()
     {
         _endValue = Mathf.Clamp(_calculator.ValueLife, _lineLife.minValue, _lineLife.maxValue);
 

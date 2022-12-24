@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
 {
    [SerializeField] private Slider _health;
 
-    public static Action OnClic;
+    public static Action HealthHasChanged;
 
     private int _valueLife = 100;
     private int _maxHealth = 100;
@@ -19,15 +19,15 @@ public class Health : MonoBehaviour
         _valueLife -= incrementValue;
         _valueLife = Mathf.Clamp(_valueLife, _minHealth, _maxHealth);
 
-        OnClic?.Invoke();
+        HealthHasChanged?.Invoke();
     }
 
-    public void TakeDamage(int incrementValue)
+    public void Heal(int incrementValue)
     {
         _valueLife += incrementValue;
         _valueLife = Mathf.Clamp(_valueLife, _minHealth, _maxHealth);
 
-        OnClic?.Invoke();
+        HealthHasChanged?.Invoke();
     }
 
     private void Start()
